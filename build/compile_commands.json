@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Channel.o -c /home/pengke/learn_pk/myMuduo/Channel.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/Channel.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/DefaultPoller.o -c /home/pengke/learn_pk/myMuduo/DefaultPoller.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/DefaultPoller.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EPollPoller.o -c /home/pengke/learn_pk/myMuduo/EPollPoller.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/EPollPoller.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoop.o -c /home/pengke/learn_pk/myMuduo/EventLoop.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/EventLoop.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/InetAddress.o -c /home/pengke/learn_pk/myMuduo/InetAddress.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/InetAddress.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Logger.o -c /home/pengke/learn_pk/myMuduo/Logger.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/Logger.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Poller.o -c /home/pengke/learn_pk/myMuduo/Poller.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/Poller.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/TcpServer.o -c /home/pengke/learn_pk/myMuduo/TcpServer.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/TcpServer.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Timestamp.o -c /home/pengke/learn_pk/myMuduo/Timestamp.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/Timestamp.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/useMuduo.o -c /home/pengke/learn_pk/myMuduo/useMuduo.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/useMuduo.cpp"
+}
+]
