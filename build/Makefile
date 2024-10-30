@@ -139,6 +139,21 @@ Channel.s:
 .PHONY : Channel.s
 
 # target to build an object file
+CurrenThread.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/CurrenThread.o
+.PHONY : CurrenThread.o
+
+# target to preprocess a source file
+CurrenThread.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/CurrenThread.i
+.PHONY : CurrenThread.i
+
+# target to generate assembly for a file
+CurrenThread.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/CurrenThread.s
+.PHONY : CurrenThread.s
+
+# target to build an object file
 DefaultPoller.o:
 	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/DefaultPoller.o
 .PHONY : DefaultPoller.o
@@ -285,6 +300,9 @@ help:
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
+	@echo "... CurrenThread.o"
+	@echo "... CurrenThread.i"
+	@echo "... CurrenThread.s"
 	@echo "... DefaultPoller.o"
 	@echo "... DefaultPoller.i"
 	@echo "... DefaultPoller.s"
