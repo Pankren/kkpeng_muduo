@@ -28,14 +28,12 @@ void Channel::tie(const std::shared_ptr<void> &obj){
 // EventLoop类中包含ChannelList以及Poller，所以修改poller需要通过EventLoop
 void Channel::update() {
     // 通过Channel所属的EventLoop，调用poller的相应方法，注册fd的events事件
-    // addcode
-    //loop_->updateChannel(this);
+    loop_->updateChannel(this);
 }
 
 // 在Channel所属的EvnetLoop中，将当前的channel删除
 void Channel::remove() {
-    // addcode
-    //loop_->removeChannel(this);
+    loop_->removeChannel(this);
 }
 
 // fd得到poller通知后，处理事件
