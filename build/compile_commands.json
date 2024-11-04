@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Acceptor.o -c /home/pengke/learn_pk/myMuduo/Acceptor.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/Acceptor.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
   "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Channel.o -c /home/pengke/learn_pk/myMuduo/Channel.cpp",
   "file": "/home/pengke/learn_pk/myMuduo/Channel.cpp"
 },
@@ -26,6 +31,16 @@
 },
 {
   "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoopThread.o -c /home/pengke/learn_pk/myMuduo/EventLoopThread.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/EventLoopThread.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoopThreadPool.o -c /home/pengke/learn_pk/myMuduo/EventLoopThreadPool.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/EventLoopThreadPool.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
   "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/InetAddress.o -c /home/pengke/learn_pk/myMuduo/InetAddress.cpp",
   "file": "/home/pengke/learn_pk/myMuduo/InetAddress.cpp"
 },
@@ -41,8 +56,18 @@
 },
 {
   "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Socket.o -c /home/pengke/learn_pk/myMuduo/Socket.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/Socket.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
   "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/TcpServer.o -c /home/pengke/learn_pk/myMuduo/TcpServer.cpp",
   "file": "/home/pengke/learn_pk/myMuduo/TcpServer.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Thread.o -c /home/pengke/learn_pk/myMuduo/Thread.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/Thread.cpp"
 },
 {
   "directory": "/home/pengke/learn_pk/myMuduo/build",
