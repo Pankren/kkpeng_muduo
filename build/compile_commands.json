@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Buffer.o -c /home/pengke/learn_pk/myMuduo/Buffer.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/Buffer.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
   "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Channel.o -c /home/pengke/learn_pk/myMuduo/Channel.cpp",
   "file": "/home/pengke/learn_pk/myMuduo/Channel.cpp"
 },
@@ -58,6 +63,11 @@
   "directory": "/home/pengke/learn_pk/myMuduo/build",
   "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/Socket.o -c /home/pengke/learn_pk/myMuduo/Socket.cpp",
   "file": "/home/pengke/learn_pk/myMuduo/Socket.cpp"
+},
+{
+  "directory": "/home/pengke/learn_pk/myMuduo/build",
+  "command": "/usr/bin/g++  -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC   -o CMakeFiles/mymuduo.dir/TcpConnection.o -c /home/pengke/learn_pk/myMuduo/TcpConnection.cpp",
+  "file": "/home/pengke/learn_pk/myMuduo/TcpConnection.cpp"
 },
 {
   "directory": "/home/pengke/learn_pk/myMuduo/build",

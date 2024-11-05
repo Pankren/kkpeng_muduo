@@ -4,6 +4,7 @@
 #include "InetAddress.h"
 #include "Acceptor.h"
 #include "unordered_map"
+#include "EventLoop.h"
 #include "EventLoopThreadPool.h"
 #include "Callbacks.h"
 #include "TcpConnection.h"
@@ -27,8 +28,8 @@ public:
     TcpServer(EventLoop* loop,
         const InetAddress& listenAddr,
         const std::string& nameArg,
-        Option option = kNoReusePort) {}
-    ~TcpServer() {}
+        Option option = kNoReusePort);
+    ~TcpServer();
 
     void setThreadInitCallback(const ThreadInitCallback& cb) {
         threadInitCallback_ = cb;
@@ -55,7 +56,7 @@ private:
 
     using ConnectionMap = std::unordered_map<std::string, TcpConnectionPtr>;
 
-    EventLoop *loop_;  // baseloop
+    EventLoop* loop_;  // baseloop
 
     const std::string ipPort_;
     const std::string name_;

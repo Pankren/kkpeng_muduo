@@ -8,16 +8,12 @@
 
 static EventLoop* CheckLoopNotNull(EventLoop* loop) {
     if (loop == nullptr) {
-        LOG_FATAL("%s:%s:%s mainLoop is null! \n", __FILE__, __FUNCTION__, __LINE__);
+        LOG_FATAL("%s:%s:%d mainLoop is null! \n", __FILE__, __FUNCTION__, __LINE__);  // 文件名 函数名 行号
     }
     return loop;
 }
 
-TcpServer::TcpServer(
-    EventLoop* loop,
-    const InetAddress& listenAddr,
-    const std::string& nameArg,
-    Option option)
+TcpServer::TcpServer(EventLoop* loop, const InetAddress& listenAddr, const std::string& nameArg, Option option)
     : loop_(CheckLoopNotNull(loop))
     , ipPort_(listenAddr.toIpPort())
     , name_(nameArg)
@@ -39,7 +35,7 @@ TcpServer::~TcpServer() {
         TcpConnectionPtr conn(item.second);
         item.second.reset();
 
-        conn->getLoop()->runInLoop(std::bind(&TcpConnection::connectionDestroyed, conn));
+        conn->getLoop()->runInLoop(std::bind(&TcpConnection::connectDestroyed, conn));
     }
 }
 
@@ -48,9 +44,9 @@ void TcpServer::setThreadNum(int numThreads) {
 }
 
 void TcpServer::start() {
-    if (started_++ == 0) {
+    if (started_++ == 0) { // 防止一个TcpServer对象被start多次
         threadPool_->start(threadInitCallback_);
-        loop_->runInLoop(std::bind(&Acceptor::listen, acceptor_.get()));
+        loop_->runInLoop(std::bind(&Acceptor::listen, acceptor_.get())); // 启动底部的loop线程池
     }
 }
 
