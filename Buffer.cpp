@@ -1,7 +1,7 @@
 #include "Buffer.h"
 
 #include <errno.h>
-#include <sys/uio.h>
+#include <sys/uio.h>  // iovec
 #include <unistd.h>
 
 ssize_t Buffer::readFd(int fd, int* saveErrno) {
@@ -17,14 +17,17 @@ ssize_t Buffer::readFd(int fd, int* saveErrno) {
     */
     struct iovec vec[2];
 
-    const size_t writable = writableBytes();
+    const size_t writable = writableBytes(); // buffer底层缓冲区剩余的可写空间大小
     vec[0].iov_base = begin() + writerIndex_;
     vec[0].iov_len = writable;
 
     vec[1].iov_base = extrabuf;
     vec[1].iov_len = sizeof extrabuf;
 
-    const int iovcnt = (writable < sizeof extrabuf) ? 2 : 1;
+    // ssize_t readv(int fd, const struct iovec *iov, int iovcnt);
+    // readv()可以将文件描述符中元素读取到多个缓冲区
+    // iovcnt表示iov数组中元素的个数，即要读取数据到的缓冲区的数量。
+    const int iovcnt = (writable < sizeof extrabuf) ? 2 : 1;  // 取两个缓冲区 如果源buffer足够大取一个
     const ssize_t n = ::readv(fd, vec, iovcnt);
     if (n < 0) {
         *saveErrno = errno;

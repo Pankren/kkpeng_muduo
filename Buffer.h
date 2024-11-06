@@ -72,7 +72,9 @@ public:
         return begin() + writerIndex_;
     }
 
+    // 从fd读取数据
     ssize_t readFd(int fd, int* saveErrno);
+    // 向fd写入数据
     ssize_t writeFd(int fd, int* saveErrno);
 private:
     char* begin() {

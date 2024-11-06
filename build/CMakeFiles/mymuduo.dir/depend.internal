@@ -84,7 +84,12 @@ CMakeFiles/mymuduo.dir/Socket.o
 CMakeFiles/mymuduo.dir/TcpConnection.o
  /home/pengke/learn_pk/myMuduo/Buffer.h
  /home/pengke/learn_pk/myMuduo/Callbacks.h
+ /home/pengke/learn_pk/myMuduo/Channel.h
+ /home/pengke/learn_pk/myMuduo/CurrentThread.h
+ /home/pengke/learn_pk/myMuduo/EventLoop.h
  /home/pengke/learn_pk/myMuduo/InetAddress.h
+ /home/pengke/learn_pk/myMuduo/Logger.h
+ /home/pengke/learn_pk/myMuduo/Socket.h
  /home/pengke/learn_pk/myMuduo/TcpConnection.cpp
  /home/pengke/learn_pk/myMuduo/TcpConnection.h
  /home/pengke/learn_pk/myMuduo/Timestamp.h

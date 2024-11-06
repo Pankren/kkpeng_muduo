@@ -50,7 +50,9 @@ void TcpServer::start() {
     }
 }
 
+// 有一个新的客户端的连接，acceptor会执行这个回调操作
 void TcpServer::newConnection(int sockfd, const InetAddress &peerAddr) {
+    // 轮询算法，选择一个subloop，来管理channel
     EventLoop* ioLoop = threadPool_->getNextLoop();
     char buf[64] = {0};
     snprintf(buf, sizeof buf, "-%s#%d", ipPort_.c_str(), nextConnId_);
@@ -60,6 +62,7 @@ void TcpServer::newConnection(int sockfd, const InetAddress &peerAddr) {
     LOG_INFO("TcpServer::newConnection [%s] - new connection [%s] from %s \n",
         name_.c_str(), connName.c_str(), peerAddr.toIpPort().c_str());
 
+    // 通过sockfd获取其绑定的本机的ip地址和端口信息
     sockaddr_in local;
     ::bzero(&local, sizeof local);
     socklen_t addrlen = sizeof local;
@@ -68,15 +71,19 @@ void TcpServer::newConnection(int sockfd, const InetAddress &peerAddr) {
     }  
     InetAddress localAddr(local);
 
+    // 根据连接成功的sockfd，创建TcpConnection连接对象
     TcpConnectionPtr conn(new TcpConnection(ioLoop, connName, sockfd, localAddr, peerAddr));
     connections_[connName] == conn;
 
+    // 下面的回调都是用户设置给TcpServer->TcpConnection->Channel->Poller->notify channel调用回调
     conn->setConnectionCallback(connectionCallback_);
     conn->setMessageCallback(messageCallback_);
     conn->setWriteCompleteCallback(writeCompleteCallback_);
 
+    // 设置了如何关闭连接的回调
     conn->setCloseCallback(std::bind(&TcpServer::removeConnection, this, std::placeholders::_1));
 
+    // 直接调用TcpConnection::connectEstablished
     ioLoop->runInLoop(std::bind(&TcpConnection::connectEstablished, conn));
 }
 
